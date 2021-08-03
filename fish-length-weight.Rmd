@@ -27,8 +27,9 @@ $\text{super}^\text{script}$
 
 $\text{sub}_\text{script}$
 
-# How to insert bullets?
-# How to insert image?
+How to insert bullets?
+
+How to insert image?
 
 ```{r}
 W <- function(a,b,L) {W = a * L ^ b}
@@ -58,5 +59,6 @@ ggplot(data = barracuda_frame, aes(x = fish_length, y = barracuda_weight)) +
        title = "Weight vs. Length of Barracuda")
 
 ```
+
 
 
