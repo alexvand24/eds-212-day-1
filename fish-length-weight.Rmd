@@ -1,0 +1,62 @@
+---
+title: "eds-212-day-1"
+author: "Alex Vand"
+date: "8/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Title
+## Subtitle
+### Heading
+#### Subheading
+##### Next
+###### Smallest
+
+*italics*
+**bold**
+
+_italics_
+__bold__
+
+$\text{super}^\text{script}$
+
+$\text{sub}_\text{script}$
+
+# How to insert bullets?
+# How to insert image?
+
+```{r}
+W <- function(a,b,L) {W = a * L ^ b}
+
+# L = total fish length (cm)
+# W = expected fish weight (g)
+# a, b = species dependent parameters
+
+Milkfish <- W(a = 0.0905, b = 2.52, L = 60)
+Giant_trevally <- W(a = 0.0353, b = 3.05, L = 60)
+Great_barracuda <- W(a = 0.0181, b = 3.27, L = 60)
+
+```
+
+
+```{r}
+fish_length <- seq(from = 0, to = 200, by = 1)
+
+barracuda_weight <- W(a = 0.0181, b = 3.27, L = fish_length)
+
+barracuda_frame <- data.frame(fish_length, barracuda_weight)
+
+ggplot(data = barracuda_frame, aes(x = fish_length, y = barracuda_weight)) +
+  geom_point() +
+  labs(x = "Length of fish (cm)",
+       y = "Weight of barracuda (g)",
+       title = "Weight vs. Length of Barracuda")
+
+```
+
+
